@@ -14,6 +14,13 @@ function App() {
       quantity: 'Qty',
       updateButtonText: 'Update Shopping Cart'
     },
+    shoppingSummary: {
+      shipping: "SHIPPING",
+      cartTotals: "CART TOTALS",
+      subTotal: "Subtotal",
+      grandTotal: "Grand Total",
+      proceedButtonText: "Proceed to checkout"
+    }
   }
 
   const items = [
@@ -31,6 +38,7 @@ function App() {
       <ShoppingCart
         header={languagePack.header}
         mainCardText={languagePack.mainCard}
+        shoppingSummaryText={languagePack.shoppingSummary}
         items={items}
       />
     </div>
