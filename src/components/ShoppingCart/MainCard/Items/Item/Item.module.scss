@@ -1,0 +1,20 @@
+.Item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding: 1rem 0 2rem 0;
+    color: #666;
+    font-family: inherit;
+    .ProductName {
+        font-weight: lighter;
+        font-family: inherit;
+    }
+
+    .UnitPrice {
+        font-weight: 600;
+        font-family: inherit;
+    }
+}
