@@ -1,37 +1,36 @@
+// libraries
+import React, {useState} from 'react';
+// business logic
+import { getShoppingCartItems, getTotals, setNewQuantityOfAnItem,} from './../business_logic/shoppingCartLogic';
+// styles
 import './App.css';
 // components
 import ShoppingCart from './../components/ShoppingCart/ShoppingCart';
+// language packs
+import _languagePack from './../data/EN_language_pack.json';
+// shopping card data
+import _cart from './../data/cart_products.json';
+import _products from './../data/products.json';
+
 
 function App() {
-  const languagePack = {
-    header: {
-      title: "Shopping Cart",
-      buttonText: "Proceed to checkout"
-    },
-    mainCard: {
-      productName: 'Product Name',
-      unitPrice: 'Unit Price',
-      quantity: 'Qty',
-      updateButtonText: 'Update Shopping Cart'
-    },
-    shoppingSummary: {
-      shipping: "SHIPPING",
-      cartTotals: "CART TOTALS",
-      subTotal: "Subtotal",
-      grandTotal: "Grand Total",
-      proceedButtonText: "Proceed to checkout"
+  const languagePack = _languagePack;
+
+  const [items, setItems] = useState(getShoppingCartItems(_cart, _products));
+
+  const [totals, setTotals] = useState(getTotals(items));
+
+  const setQuantityOfItem = (id, quantity) => {
+    if (quantity < 0){
+      return;
     }
+    let newItems = setNewQuantityOfAnItem(id, quantity, items);
+    setItems(newItems);
   }
 
-  const items = [
-    {
-      id: "unique",
-      image: "./images/headphones.png",
-      productName: "Headphones",
-      unitPrice: "$11.99",
-      quantity: 1
-    }
-  ]
+  const updateTotals = () => {
+    setTotals(getTotals(items))
+  }
 
   return (
     <div className="App">
@@ -40,6 +39,9 @@ function App() {
         mainCardText={languagePack.mainCard}
         shoppingSummaryText={languagePack.shoppingSummary}
         items={items}
+        totals={totals}
+        setQuantity={setQuantityOfItem}
+        updateTotals={updateTotals}
       />
     </div>
   );
