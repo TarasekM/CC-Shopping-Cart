@@ -12,7 +12,7 @@ const Item = (props) => {
                     alt="Delete"
                     onClick={() => props.deleteItem(props.item.id)} />
             </div>
-            <img src={`./images/${props.item.image}`} />
+            <img src={`./images/${props.item.image}`} alt="The Product" />
             <p className={styles.ProductName}>
                 {props.item.name}
             </p>
