@@ -15,6 +15,7 @@ import _products from './../data/products.json';
 
 function App() {
   const languagePack = _languagePack;
+
   const [isCartVisible, setIsCartVisible] = useState(true);
 
   const [items, setItems] = useState(getShoppingCartItems(_cart, _products));
