@@ -7,7 +7,7 @@ const ShoppingSummary = (props) =>{
         <div className={styles.ShoppingSummary}>
             <div className={`${styles.TwoItemFlex} ${styles.Shipping} ${styles.Conspicuous}`}>
                 <p>{props.shoppingSummaryText.shipping}</p>
-                <p>$mock</p>
+                <p>${props.totals.shippingPrice}</p>
             </div>
             <div className={styles.TotalsContainer}>
                 <div className={`${styles.CartTotals} ${styles.Conspicuous}`}>
@@ -15,12 +15,12 @@ const ShoppingSummary = (props) =>{
                 </div>
                 <div className={`${styles.TwoItemFlex} ${styles.SubTotal}`}>
                     <p className={styles.GreyedOut}>{props.shoppingSummaryText.subTotal}</p>
-                    <p>$mock</p>
+                    <p>${props.totals.subtotal}</p>
                 </div>
                 <hr />
                 <div className={`${styles.TwoItemFlex} ${styles.GrandTotal}`}>
                     <p className={styles.GreyedOut}>{props.shoppingSummaryText.grandTotal}</p>
-                    <p className={styles.Greater}>$mock</p>
+                    <p className={styles.Greater}>${props.totals.grandTotal}</p>
                 </div>
                 <div className={styles.ProceedButtonContainer}>
                     <Button text={props.shoppingSummaryText.proceedButtonText}/>

@@ -10,7 +10,14 @@ const Items = (props) => {
         }
 
         return listOfItems.map((item) => {
-          return <Item key={item.id} item={item}/>
+          return (
+            <Item
+                key={item.id}
+                item={item}
+                setQuantity={props.setQuantity}
+                updateTotals={props.updateTotals}
+            />
+            )
         });
     }
 

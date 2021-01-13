@@ -9,14 +9,18 @@ const Item = (props) => {
             <div className={styles.Delete}>
                 <img src={'./images/x-img.png'} />
             </div>
-            <img src={props.item.image} />
+            <img src={`./images/${props.item.image}`} />
             <p className={styles.ProductName}>
-                {props.item.productName}
+                {props.item.name}
             </p>
             <p className={styles.UnitPrice}>
-                {props.item.unitPrice}
+                ${props.item.price.toFixed(2)}
             </p>
-            <QuantityEditor quantity={props.item.quantity}/>
+            <QuantityEditor
+                quantity={props.item.quantity}
+                id={props.item.id}
+                setQuantity={props.setQuantity}
+                updateTotals={props.updateTotals}/>
         </div>
     );
 }

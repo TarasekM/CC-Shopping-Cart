@@ -13,11 +13,16 @@ const MainCard = (props) => {
                     <p>{props.mainCardText.quantity}</p>
                 </div>
             </div>
-            <Items items={props.items}/>
+            <Items 
+                items={props.items}
+                setQuantity={props.setQuantity}
+                updateTotals={props.updateTotals}
+                />
             <div className={styles.UpdateButtonContainer}>
                 <Button 
                     text={props.mainCardText.updateButtonText}
                     additionalStyle={styles.Bold}
+                    onClickFunction={props.updateTotals}
                     />
             </div>
 
