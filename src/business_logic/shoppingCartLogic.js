@@ -46,10 +46,18 @@ const getTotals = (items) => {
     };
 }
 
+const deleteItem = (items, id) => {
+    let newItems = [...items];
+    const index = items.findIndex(i => i.id === id);
+    newItems.splice(index, 1);
+    return newItems;
+}
+
 export {
     getShoppingCartItems,
     setNewQuantityOfAnItem,
     getSubtotal,
     getShippingPrice,
-    getTotals
+    getTotals,
+    deleteItem
 };
