@@ -2,8 +2,24 @@ import styles from './MainCard.module.scss';
 
 import Button from './../../Buttons/Button';
 import Items from './Items/Items';
+import EmptyCart from './../../Informations/EmptyCart/EmptyCart';
+
 
 const MainCard = (props) => {
+    const Cart = () => {
+        if (props.items.length < 1){
+            return <EmptyCart emptyCartInfo={props.mainCardText.emptyCartInfo} />
+        }
+        return (
+            <Items 
+            items={props.items}
+            setQuantity={props.setQuantity}
+            updateTotals={props.updateTotals}
+            deleteItem={props.deleteItem}
+            />
+        );
+    }
+
     return(
         <div className={styles.MainCard}>
             <div className={styles.MainCardHeader}>
@@ -13,12 +29,7 @@ const MainCard = (props) => {
                     <p>{props.mainCardText.quantity}</p>
                 </div>
             </div>
-            <Items 
-                items={props.items}
-                setQuantity={props.setQuantity}
-                updateTotals={props.updateTotals}
-                deleteItem={props.deleteItem}
-                />
+            {Cart()}
             <div className={styles.UpdateButtonContainer}>
                 <Button 
                     text={props.mainCardText.updateButtonText}
