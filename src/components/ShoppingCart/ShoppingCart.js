@@ -17,7 +17,10 @@ const ShoppingCart = (props) => {
                 <Button text={props.header.buttonText}/>
             </div>
             <div className={styles.MainContainer}>
-                <MainCard mainCardText={props.mainCardText} />
+                <MainCard 
+                    mainCardText={props.mainCardText}
+                    items={props.items}    
+                />
             </div>
         </div>
     );
