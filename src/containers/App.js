@@ -15,6 +15,7 @@ import _products from './../data/products.json';
 
 function App() {
   const languagePack = _languagePack;
+  const [isCartVisible, setIsCartVisible] = useState(true);
 
   const [items, setItems] = useState(getShoppingCartItems(_cart, _products));
 
@@ -38,6 +39,11 @@ function App() {
     setTotals(newItems);
   }
 
+  const submitedSuccessfully = () => {
+    setIsCartVisible(false);
+    alert(languagePack.order.submitedSuccessfully);
+  }
+
   return (
     <div className="App">
       <ShoppingCart
@@ -46,6 +52,8 @@ function App() {
         shoppingSummaryText={languagePack.shoppingSummary}
         items={items}
         totals={totals}
+        isVisible={isCartVisible}
+        orderSubmited={submitedSuccessfully}
         setQuantity={setQuantityOfItem}
         updateTotals={updateTotals}
         deleteItem={_deleteItem}

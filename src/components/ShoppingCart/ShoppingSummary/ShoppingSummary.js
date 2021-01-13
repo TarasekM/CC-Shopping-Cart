@@ -23,7 +23,9 @@ const ShoppingSummary = (props) =>{
                     <p className={styles.Greater}>${props.totals.grandTotal}</p>
                 </div>
                 <div className={styles.ProceedButtonContainer}>
-                    <Button text={props.shoppingSummaryText.proceedButtonText}/>
+                    <Button 
+                        text={props.shoppingSummaryText.proceedButtonText}
+                        onClickFunction={props.orderSubmited}/>
                 </div>
             </div>
         </div>  
