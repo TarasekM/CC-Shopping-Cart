@@ -1,4 +1,6 @@
 import './App.css';
+// components
+import ShoppingCart from './../components/ShoppingCart/ShoppingCart';
 
 function App() {
   const languagePack = {
@@ -16,7 +18,10 @@ function App() {
 
   return (
     <div className="App">
-
+      <ShoppingCart
+        header={languagePack.header}
+        mainCardText={languagePack.mainCard}
+      />
     </div>
   );
 }
