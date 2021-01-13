@@ -66,4 +66,10 @@
     .Greater{
         font-size: 1.2rem;
     }
+
+    @media screen and (max-width: 1080px) {
+        min-width: 90%;
+        flex-basis: 0%;
+        margin-left: 0;
+    }
 }
