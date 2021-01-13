@@ -24,6 +24,7 @@ const ShoppingCart = (props) => {
                     items={props.items}
                     setQuantity={props.setQuantity}
                     updateTotals={props.updateTotals}
+                    deleteItem={props.deleteItem}
                 />
                 <ShoppingSummary 
                     shoppingSummaryText={props.shoppingSummaryText}

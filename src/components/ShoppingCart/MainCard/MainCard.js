@@ -17,6 +17,7 @@ const MainCard = (props) => {
                 items={props.items}
                 setQuantity={props.setQuantity}
                 updateTotals={props.updateTotals}
+                deleteItem={props.deleteItem}
                 />
             <div className={styles.UpdateButtonContainer}>
                 <Button 

@@ -1,7 +1,7 @@
 // libraries
 import React, {useState} from 'react';
 // business logic
-import { getShoppingCartItems, getTotals, setNewQuantityOfAnItem,} from './../business_logic/shoppingCartLogic';
+import { getShoppingCartItems, getTotals, setNewQuantityOfAnItem, deleteItem} from './../business_logic/shoppingCartLogic';
 // styles
 import './App.css';
 // components
@@ -32,6 +32,12 @@ function App() {
     setTotals(getTotals(items))
   }
 
+  const _deleteItem = (id) => {
+    const newItems = deleteItem(items, id);
+    setItems(newItems);
+    setTotals(newItems);
+  }
+
   return (
     <div className="App">
       <ShoppingCart
@@ -42,6 +48,7 @@ function App() {
         totals={totals}
         setQuantity={setQuantityOfItem}
         updateTotals={updateTotals}
+        deleteItem={_deleteItem}
       />
     </div>
   );

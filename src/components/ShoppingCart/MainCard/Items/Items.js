@@ -16,6 +16,7 @@ const Items = (props) => {
                 item={item}
                 setQuantity={props.setQuantity}
                 updateTotals={props.updateTotals}
+                deleteItem={props.deleteItem}
             />
             )
         });
