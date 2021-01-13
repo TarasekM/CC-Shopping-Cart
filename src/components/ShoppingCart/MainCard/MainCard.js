@@ -1,6 +1,7 @@
 import styles from './MainCard.module.scss';
 
 import Button from './../../Buttons/Button';
+import Items from './Items/Items';
 
 const MainCard = (props) => {
     return(
@@ -12,7 +13,7 @@ const MainCard = (props) => {
                     <p>{props.mainCardText.quantity}</p>
                 </div>
             </div>
-
+            <Items items={props.items}/>
             <div className={styles.UpdateButtonContainer}>
                 <Button 
                     text={props.mainCardText.updateButtonText}
