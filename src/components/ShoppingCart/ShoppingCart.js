@@ -5,7 +5,7 @@ import styles from './ShoppingCart.module.scss';
 // components
 import Button from './../Buttons/Button';
 import MainCard from './MainCard/MainCard';
-
+import ShoppingSummary from './ShoppingSummary/ShoppingSummary';
 
 const ShoppingCart = (props) => {
     return(
@@ -19,7 +19,10 @@ const ShoppingCart = (props) => {
             <div className={styles.MainContainer}>
                 <MainCard 
                     mainCardText={props.mainCardText}
-                    items={props.items}    
+                    items={props.items}
+                />
+                <ShoppingSummary 
+                    shoppingSummaryText={props.shoppingSummaryText}
                 />
             </div>
         </div>
