@@ -1,6 +1,17 @@
 .ShoppingCart{
+    margin: 4rem;
+    padding: 2rem;
+    min-width: 70%;
     .HeaderContainer{
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .Title {
+            font-family: inherit;
+            font-size: 1.5rem;
+            color: #999;
+        }
     }
 
     .MainContainer{
