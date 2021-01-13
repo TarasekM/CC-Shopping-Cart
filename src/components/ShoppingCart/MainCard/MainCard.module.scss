@@ -1,0 +1,11 @@
+.MainCard{
+    display: flex;
+    border: 1px solid #eee;
+    .TableHeader{
+        border-bottom: 1px solid #ccc;
+    }
+
+    .UpdateButtonContainer{
+        display: flex;
+    }
+}
