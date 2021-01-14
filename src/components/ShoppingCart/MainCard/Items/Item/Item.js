@@ -13,17 +13,20 @@ const Item = (props) => {
                     onClick={() => props.deleteItem(props.item.id)} />
             </div>
             <img src={`./images/${props.item.image}`} alt="The Product" />
-            <p className={styles.ProductName}>
-                {props.item.name}
-            </p>
-            <p className={styles.UnitPrice}>
-                ${props.item.price.toFixed(2)}
-            </p>
-            <QuantityEditor
-                quantity={props.item.quantity}
-                id={props.item.id}
-                setQuantity={props.setQuantity}
-                updateTotals={props.updateTotals}/>
+            <div className={styles.Box}>
+                <p className={styles.ProductName}>
+                    {props.item.name}
+                </p>
+                <p className={styles.UnitPrice}>
+                    ${props.item.price.toFixed(2)}
+                </p>
+                <QuantityEditor
+                    quantity={props.item.quantity}
+                    id={props.item.id}
+                    setQuantity={props.setQuantity}
+                    updateTotals={props.updateTotals}/>
+            </div>
+
         </div>
     );
 }

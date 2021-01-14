@@ -8,6 +8,16 @@
     padding: 1rem 0 2rem 0;
     color: #666;
     font-family: inherit;
+
+    .Box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        min-width: 60%;
+    }
+
     .ProductName {
         font-weight: lighter;
         font-family: inherit;
