@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Shopping Cart",
+        "buttonText": "Proceed to checkout"
+    },
+    "mainCard": {
+        "productName": "Product Name",
+        "unitPrice": "Unit Price",
+        "quantity": "Qty",
+        "updateButtonText": "Update Shopping Cart",
+        "emptyCartInfo": "You cart is empty."
+    },
+    "shoppingSummary": {
+        "shipping": "SHIPPING",
+        "cartTotals": "CART TOTALS",
+        "subTotal": "Subtotal",
+        "grandTotal": "Grand Total",
+        "proceedButtonText": "Proceed to checkout"
+    },
+    "order": {
+        "submitedSuccessfully": "Your order has been submitted successfully"
+    }
+}

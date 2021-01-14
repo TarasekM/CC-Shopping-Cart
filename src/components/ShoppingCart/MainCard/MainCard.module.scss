@@ -1,0 +1,40 @@
+.MainCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    width: 70%;
+    padding: 0 3rem;
+    box-shadow: 1px 2px 3px #ddd;
+
+    .MainCardHeader{
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        .TableHeader{
+            display: flex;
+            margin-left: 40%;
+            justify-content: space-between;
+
+            p {
+                color: #666;
+                font-weight: bold;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .UpdateButtonContainer{
+        display: flex;
+        justify-content: flex-end;
+        margin: 2rem;
+
+    }
+
+    .Bold {
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 1080px) {
+        min-width: 90%;
+        margin-bottom: 2rem;
+    }
+}

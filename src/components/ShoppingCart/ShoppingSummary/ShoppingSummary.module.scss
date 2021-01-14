@@ -1,0 +1,75 @@
+.ShoppingSummary {
+    margin-left: 2rem;
+    flex-basis: 20%;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: bold;
+    .Shipping {
+        margin-bottom: 2rem;
+        border: 1px solid #ccc;
+    }
+
+    .TotalsContainer {
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        .CartTotals{
+            border-bottom: 1px solid #ccc;
+            padding: 0.5rem 1rem;
+        }
+
+        .Totals {
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .SubTotal {
+            padding-top: 1rem;
+        }
+
+        .GrandTotal{
+            padding-bottom: 1rem;
+        }
+
+        hr {
+            display: block; height: 1px;
+            border: 0; border-top: 1px solid #ccc;
+            margin: 1em 0; padding: 0;
+            width: 90%;
+            align-self: center;
+        }
+
+        .ProceedButtonContainer{
+            padding-bottom: 1rem;
+            align-self: center;
+        }
+    }
+
+    .TwoItemFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem;
+        max-height: 34px;
+    }
+
+    .Conspicuous {
+        background-color: #eee;
+        font-family: inherit;
+    }
+
+    .GreyedOut {
+        color: #777;
+    }
+
+    .Greater{
+        font-size: 1.2rem;
+    }
+
+    @media screen and (max-width: 1080px) {
+        min-width: 90%;
+        flex-basis: 0%;
+        margin-left: 0;
+    }
+}

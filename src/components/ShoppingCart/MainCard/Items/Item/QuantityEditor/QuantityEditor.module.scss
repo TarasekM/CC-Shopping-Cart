@@ -1,0 +1,33 @@
+.QuantityEditor{
+    display: flex;
+    color: #666;
+    padding: 2rem;
+
+    .QuantityButton{
+        border: none;
+        background-color: #eee;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        width: 2rem;
+        color: inherit;
+        font-weight: bold;
+        font-family: inherit;
+        margin: 0;
+        cursor: pointer;
+        text-align: center;
+        outline: none;
+    }
+
+    .QuantityInput{
+        max-width: 2rem;
+        height: 1.5rem;
+        text-align: center;
+        color: inherit;
+        border-radius: 0;
+    
+    }
+    
+    img {
+        cursor: pointer;
+    }
+}
